@@ -1,0 +1,4 @@
+build:
+      docker build -t python-meng .
+bash: build
+      NV_GPU=5,6,7 nvidia-docker run -v /home/ugrads/hzm5196/Documents/ungrad_Haoyuan/fall2018/datalab_sketch/sketch_rnn:/sketch --net=host --ipc=host -ti python-meng:latest bash
